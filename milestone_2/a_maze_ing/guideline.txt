@@ -1,0 +1,15 @@
+virtual evironment:
+- python 3.10+
+- flake8
+- mypy
+
+
+
+to use in the code:
+- try-except
+- with open()
+- docstrings: functions + classes
+-type hint: function parameters, return types, 
+            Las variables internas,si no son obvias, empiecen vacías, 
+            estructuras un poco complejas o dificiles de entender. 
+
