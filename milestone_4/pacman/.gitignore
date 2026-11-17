@@ -1,0 +1,14 @@
+# Python virtual environments, caches, build output
+.venv/
+venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+# Generated at runtime
+highscores.json
+.highscores-*.tmp
+.DS_Store

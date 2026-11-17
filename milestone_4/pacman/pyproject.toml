@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pacman"
+version = "1.0.0"
+description = "Pac-Man clone with a pluggable graphics backend (MLX / pygame)"
+requires-python = ">=3.10"
+# Runtime dependencies (installed from the provided wheels, see Makefile):
+#   mazegenerator (assigned A-Maze-ing package), mlx (42 MiniLibX wrapper)
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["pacman", "pacman.backends"]

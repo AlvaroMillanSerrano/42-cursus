@@ -1,0 +1,43 @@
+# Pac-Man configuration (JSON with comments).
+# Lines starting with '#' are ignored. '//' and '/* */' work too.
+# Every key is optional: missing or invalid values fall back to safe
+# defaults (a warning is printed) and unknown keys are ignored.
+{
+    "highscore_filename": "highscores.json",
+
+    // Gameplay
+    "lives": 3,
+    "pacgum": 0,                      // 0 = a pacgum in every free corridor
+    "points_per_pacgum": 10,
+    "points_per_super_pacgum": 50,
+    "points_per_ghost": 200,
+    "level_max_time": 90,             // seconds per level
+    "power_time": 8,                  // seconds ghosts stay edible
+    "ghost_respawn_time": 5,          // seconds before an eaten ghost returns
+    "player_speed": 7.0,              // cells per second
+    "ghost_speed": 5.5,               // base speed, grows slightly per level
+
+    // Mazes: level 1 uses 'seed'; the other levels are random
+    "seed": 42,
+
+    // Reviewers: start with the cheat mode already enabled
+    "cheat_mode": false,
+
+    // "auto" tries MLX first, then pygame. Also "mlx" or "pygame".
+    "backend": "auto",
+
+    /* At least 10 levels. Width >= 14 and height >= 10 (room for the "42").
+       Optional per level: "seed" and "time". */
+    "levels": [
+        {"width": 17, "height": 13},
+        {"width": 19, "height": 13},
+        {"width": 19, "height": 15},
+        {"width": 21, "height": 15},
+        {"width": 21, "height": 15},
+        {"width": 23, "height": 15},
+        {"width": 23, "height": 17},
+        {"width": 25, "height": 17},
+        {"width": 25, "height": 19},
+        {"width": 27, "height": 19}
+    ]
+}
